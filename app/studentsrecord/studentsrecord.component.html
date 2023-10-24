@@ -1,0 +1,15 @@
+<div class="card mt-5">
+    <div class="card-header">Student List</div>
+    <p class="student_ID"> Students</p>
+    <div>
+        <ul *ngIf="users; else loading">
+          <div *ngFor="let user of users">
+              <li><strong>{{ user.first_NAME }}</strong></li>
+                <div style="margin-left: 10px;"><strong>Email:</strong> {{user.last_NAME}}</div>
+                <div style="margin-left: 10px;"><strong>Website:</strong> {{user.course_Name}}</div>
+          </div>
+        </ul>
+        <ng-template #loading>Loading...</ng-template>
+      </div>
+      
+
