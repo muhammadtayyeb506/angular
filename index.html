@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+</head>
+<body>
+
+<div class="container mt-3">
+    <h1 class="text-center" id="title">Student Management</h1>
+
+    <!-- Employee Form -->
+    <div class="card mt-4">
+        <div class="card-header">Add Student</div>
+        <div class="card-body">
+            <form id="StudentForm">
+                <div class="form-group">
+                    <label>First_Name:</label>
+                    <input type="text" id="first_NAME" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Last_Name:</label>
+                    <input type="text" id="last_NAME" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" id="Student_Age" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>course_ID:</label>
+                    <input type="number" id="course_ID" class="form-control">
+                </div>
+               <button type="button" class="btn btn-primary" onclick="addStudent()">Add Student</button>
+            </form>
+        </div>
+    </div>
+
+	
+	<div class="card mt-4">
+        <div class="card-header">update Student Recored</div>
+        <div class="card-body">
+            <form id="updateForm">
+			 <div class="form-group">
+                    <label>Student_ID Of the Student you want Update:</label>
+                    <input type="number" id="ID" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>First_Name:</label>
+                    <input type="text" id="Newfirst_NAME" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Last_Name:</label>
+                    <input type="text" id="Newlast_NAME" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" id="NewAge" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>course_ID:</label>
+                    <input type="number" id="Newcourse_ID" class="form-control">
+                </div>
+               <button type="button" class="btn btn-primary" onclick="updateStudent()">Update Student</button>
+            </form>
+        </div>
+    </div>
+
+	
+	
+    <!-- Delete Student Recored -->
+    <div class="card mt-4">
+        <div class="card-header">Delete Student</div>
+        <div class="card-body">
+            <form id="DeleteForm">
+                <div class="form-group">
+                    <label>Student_id:</label>
+                    <input type="number" id="Student_id" class="form-control">
+                </div>
+             <button type="button" class="btn btn-primary" onclick="DeleteStudent()">Delete</button>
+            </form>
+        </div>
+    </div>
+    
+     <!-- Student List -->
+     <div class="card mt-5">
+        <div class="card-header">Student List</div>
+        <p ID="is"></p>
+		<ul id="StudentList" class="list-group list-group-flush"></ul>
+    </div>
+
+
+ 
+
+
+    <script src="myscript.js"></script>
+
+</body>
+</html>
